@@ -49,7 +49,7 @@ Veritabanını orijinal durumuna sıfırlamanıza izin veren bir _"resetdb"_ kom
   - Belirtilen "id" ile bir projeye ait bir dizi eylem (boş olabilir) döndürür.
   - Belirtilen id'ye sahip bir proje yoksa, 404 durum koduyla yanıt verir.
 
-`api/actions/actions-router.js` içinde  _actions_ CRUD işlemleri yapan uç noktalar oluşurun:
+`api/actions/actions-router.js` içinde _actions_ CRUD işlemleri yapan uç noktalar oluşurun:
 
 - [ ] `[GET] /api/actions`
   - Yanıtın gövdesi olarak bir dizi eylem (action) (veya boş bir dizi) döndürür.
@@ -78,22 +78,22 @@ Dahil edilen veritabanında (`./data/database.db3`) depolanan her bir _resource_
 
 #### Projects
 
-| Field       | Data Type | Metadata                                                                    |
-| ----------- | --------- | --------------------------------------------------------------------------- |
-| id          | number    | projeleri oluştururken bunu sağlamayın, veritabanı kendisi oluşturur        |
-| name        | string    | required                                                                    |
-| description | string    | required                                                                    |
-| completed   | boolean   | not required, proje oluşturulurken varsayılan false dur                     |
+| Field       | Data Type | Metadata                                                             |
+| ----------- | --------- | -------------------------------------------------------------------- |
+| id          | number    | projeleri oluştururken bunu sağlamayın, veritabanı kendisi oluşturur |
+| name        | string    | required                                                             |
+| description | string    | required                                                             |
+| completed   | boolean   | not required, proje oluşturulurken varsayılan false dur              |
 
 #### Actions
 
-| Field       | Data Type | Metadata                                                                                         |
-| ----------- | --------- | ------------------------------------------------------------------------------------------------ |
-| id          | number    | projeleri oluştururken bunu sağlamayın, veritabanı kendisi oluşturur                             |
-| project_id  | number    | required, var olan projenin id si olmalı                                                         |
-| description | string    | required, 128 karakterden uzun olmamalı                                                          |
-| notes       | string    | required, limit yok. Not almak için ya da eylemi tamamlamak için gerekli şeyleri kaydetmek için  |
-| completed   | boolean   | not required, eylemler oluşturulurken varsayılan false dur                                       |
+| Field       | Data Type | Metadata                                                                                        |
+| ----------- | --------- | ----------------------------------------------------------------------------------------------- |
+| id          | number    | projeleri oluştururken bunu sağlamayın, veritabanı kendisi oluşturur                            |
+| project_id  | number    | required, var olan projenin id si olmalı                                                        |
+| description | string    | required, 128 karakterden uzun olmamalı                                                         |
+| notes       | string    | required, limit yok. Not almak için ya da eylemi tamamlamak için gerekli şeyleri kaydetmek için |
+| completed   | boolean   | not required, eylemler oluşturulurken varsayılan false dur                                      |
 
 ### Veritabanı Kalıcılığı Yardımcıları Hakkında Bilgi
 
