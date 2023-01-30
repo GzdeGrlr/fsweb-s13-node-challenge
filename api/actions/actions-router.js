@@ -1,6 +1,5 @@
 // "eylem" routerını buraya yazın
 const express = require("express");
-const { validateProject } = require("../projects/projects-middleware");
 const router = express.Router();
 
 const { validateActionsId, validateActions } = require("./actions-middlware");
